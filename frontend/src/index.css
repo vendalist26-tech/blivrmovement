@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+/* Class-based dark: `html.dark` (public) or nested `.dark` (admin) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Primary UI: Outfit — light, modern, great at body + interface */
+  --font-family-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  /* Brand / display: editorial contrast on dark sections */
+  --font-family-display: "Instrument Serif", ui-serif, Georgia, "Times New Roman", serif;
+  /* Admin secondary labels / mono hints */
+  --font-family-mono: ui-monospace, "SF Mono", Consolas, monospace;
+
+  /* BLiVR marketing tokens */
+  --color-blvr-black: #000000;
+  --color-blvr-paper: #fafafa;
+  --color-blvr-muted: #8d8d8d;
+
+  /* Admin surface (used with arbitrary or future utilities) */
+  --color-admin-canvas: oklch(99% 0.004 250);
+  --color-admin-canvas-dark: oklch(16% 0.012 280);
+  --color-admin-accent: oklch(55% 0.14 250);
+  --color-admin-accent-soft: oklch(96% 0.02 250);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Fixed TopNav: anchor scroll targets sit below the bar (matches section scroll-mt) */
+    scroll-padding-top: 5rem;
+  }
+  @media (min-width: 640px) {
+    html {
+      scroll-padding-top: 6rem;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  body {
+    @apply min-h-dvh bg-white font-sans text-slate-900 antialiased dark:bg-black dark:text-zinc-100;
+    font-feature-settings: "ss01" on, "cv01" on;
+  }
+}
+
+/* Admin-only polish: hairline type rhythm (scoped by parent) */
+@layer components {
+  @keyframes gc-success-pop {
+    0% {
+      opacity: 0;
+      transform: translateY(8px) scale(0.97);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .gc-success-modal {
+    animation: gc-success-pop 240ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  @keyframes blivr-letter-in {
+    0% {
+      opacity: 0;
+      transform: translateY(0.6rem) scale(0.94);
+      filter: blur(6px);
+    }
+    65% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+  }
+
+  .blivr-loading-letter {
+    opacity: 0;
+    animation: blivr-letter-in 900ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .blivr-loading-letter {
+      animation: none;
+      opacity: 1;
+      transform: none;
+      filter: none;
+    }
+  }
+
+  .admin-app {
+    font-optical-sizing: auto;
+  }
+  .admin-app h1,
+  .admin-app h2,
+  .admin-app h3 {
+    @apply font-medium tracking-tight;
+    font-feature-settings: "ss01" on, "cv01" on;
+  }
+  .site-content-accordion__panel[open] .site-content-accordion__chev {
+    @apply rotate-180;
+  }
+}

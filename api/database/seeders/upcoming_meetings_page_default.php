@@ -1,0 +1,45 @@
+<?php
+
+return [
+    'metaTitle' => 'Upcoming Meetings · BLiVR Movement',
+    'heroEyebrow' => 'Gather with us',
+    'heroTitle' => 'Upcoming Meetings',
+    'heroDescription' => 'Worship nights, weekly discipleship, and early-morning prayer—every rhythm exists so you can encounter Jesus and build lasting community. Browse what is ahead, then sign up so we can save you a seat or send the Zoom link.',
+    'homepageSectionVisible' => true,
+    'carouselTitle' => 'Upcoming Meetings',
+    'carouselSubtitle' => "What's on the calendar—pop-ups, weekly rhythms, and prayer calls. Swipe or use the arrows to browse.",
+    'listEyebrow' => 'All gatherings',
+    'listTitle' => 'Pick what fits your week',
+    'listSubtitle' => 'Pop-ups, weekly rhythms, and prayer calls—each space is designed to help you grow in faith and find your people.',
+    'ctaEyebrow' => 'Next step',
+    'ctaTitle' => 'Ready to join a gathering?',
+    'ctaBody' => 'Tell us which meetings you are interested in on the join form—we will follow up with details, reminders, and Zoom links where needed.',
+    'statsSectionVisible' => true,
+    'stats' => [
+        [
+            'id' => 'calendar',
+            'label' => 'On the calendar',
+            'suffix' => 'gatherings',
+            'countType' => 'total',
+            'icon' => 'calendar',
+            'visible' => true,
+        ],
+        [
+            'id' => 'in-person',
+            'label' => 'In person',
+            'suffix' => 'spaces',
+            'countType' => 'in-person',
+            'icon' => 'users',
+            'visible' => true,
+        ],
+        [
+            'id' => 'online',
+            'label' => 'Online',
+            'suffix' => 'prayer calls',
+            'countType' => 'online',
+            'icon' => 'users',
+            'visible' => true,
+        ],
+    ],
+    'rsvp' => require database_path('seeders/upcoming_meetings_rsvp_default.php'),
+];

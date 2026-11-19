@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BLiVR Movement | Coming Soon</title>
+    <meta
+      name="description"
+      content="BLVR Movement is launching soon. Stay tuned for the movement."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                black: "#000000",
+                white: "#f5f5f5",
+                gray: "#8d8d8d",
+              },
+            },
+            fontFamily: {
+              display: ["Georgia", "Times New Roman", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @keyframes fade-up {
+        from {
+          opacity: 0;
+          transform: translateY(22px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float-soft {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+
+      @keyframes number-pop {
+        0% {
+          transform: scale(0.94);
+          opacity: 0.75;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .reveal {
+        opacity: 0;
+        animation: fade-up 0.9s ease forwards;
+      }
+
+      .logo-float {
+        opacity: 0;
+        animation: fade-up 0.9s ease forwards, float-soft 5s ease-in-out 0.9s infinite;
+      }
+
+      .countdown-card {
+        transition: transform 250ms ease, border-color 250ms ease, background-color 250ms ease;
+      }
+
+      .countdown-card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .count-value.tick {
+        animation: number-pop 220ms ease;
+      }
+    </style>
+  </head>
+  <body class="bg-brand.black text-brand.white antialiased">
+    <main class="relative min-h-screen overflow-hidden">
+      <div class="pointer-events-none absolute inset-0">
+        <div
+          class="absolute left-1/2 top-1/2 h-[42rem] w-[42rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5 blur-3xl"
+        ></div>
+      </div>
+
+      <section
+        class="relative mx-auto flex min-h-screen w-full max-w-6xl flex-col items-center justify-center px-6 py-16 sm:px-10"
+      >
+        <img
+          src="./BLVR-Movement.jpeg"
+          alt="BLVR Movement logo"
+          class="logo-float w-full max-w-[380px] rounded-md border border-white/10 shadow-2xl shadow-black/60 sm:max-w-[440px]"
+          onerror="this.onerror=null; this.src='https://placehold.co/880x880/000000/f5f5f5?text=BLVR+Movement';"
+        />
+
+        <p
+          class="reveal mt-8 text-center font-display text-xs uppercase tracking-[0.4em] text-brand.gray sm:text-sm"
+          style="animation-delay: 0.15s"
+        >
+          New Era In Motion
+        </p>
+
+        <h1
+          class="reveal mt-3 text-center font-display text-4xl uppercase leading-tight sm:text-5xl md:text-6xl"
+          style="animation-delay: 0.25s"
+        >
+          Coming Soon
+        </h1>
+
+        <p
+          class="reveal mt-5 max-w-2xl text-center text-sm leading-relaxed text-brand.gray sm:text-base"
+          style="animation-delay: 0.35s"
+        >
+          BLiVR Movement is preparing something timeless, bold, and built for
+          believers. We are almost ready to launch.
+        </p>
+
+        <div
+          class="reveal mt-8 grid w-full max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4"
+          id="countdown"
+          style="animation-delay: 0.45s"
+        >
+          <div class="countdown-card rounded-xl border border-white/15 bg-white/5 p-4 text-center">
+            <p class="count-value text-2xl font-semibold sm:text-4xl" id="days">00</p>
+            <p class="mt-1 text-[10px] uppercase tracking-[0.25em] text-brand.gray sm:text-xs">
+              Days
+            </p>
+          </div>
+          <div class="countdown-card rounded-xl border border-white/15 bg-white/5 p-4 text-center">
+            <p class="count-value text-2xl font-semibold sm:text-4xl" id="hours">00</p>
+            <p class="mt-1 text-[10px] uppercase tracking-[0.25em] text-brand.gray sm:text-xs">
+              Hours
+            </p>
+          </div>
+          <div class="countdown-card rounded-xl border border-white/15 bg-white/5 p-4 text-center">
+            <p class="count-value text-2xl font-semibold sm:text-4xl" id="minutes">00</p>
+            <p class="mt-1 text-[10px] uppercase tracking-[0.25em] text-brand.gray sm:text-xs">
+              Minutes
+            </p>
+          </div>
+          <div class="countdown-card rounded-xl border border-white/15 bg-white/5 p-4 text-center">
+            <p class="count-value text-2xl font-semibold sm:text-4xl" id="seconds">00</p>
+            <p class="mt-1 text-[10px] uppercase tracking-[0.25em] text-brand.gray sm:text-xs">
+              Seconds
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="reveal mt-8 inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/5 px-5 py-3 text-xs uppercase tracking-[0.25em] text-brand.white/90 sm:text-sm"
+          style="animation-delay: 0.55s"
+        >
+          <span class="h-2 w-2 animate-pulse rounded-full bg-brand.white"></span>
+          Stay Tuned
+        </div>
+      </section>
+    </main>
+    <script>
+      // Set your launch date here (YYYY-MM-DDTHH:MM:SS format)
+      const launchDate = Date.now() + 5 * 24 * 60 * 60 * 1000;
+
+      const daysEl = document.getElementById("days");
+      const hoursEl = document.getElementById("hours");
+      const minutesEl = document.getElementById("minutes");
+      const secondsEl = document.getElementById("seconds");
+
+      function formatUnit(value) {
+        return String(value).padStart(2, "0");
+      }
+
+      function setCount(el, value) {
+        const next = formatUnit(value);
+        if (el.textContent !== next) {
+          el.textContent = next;
+          el.classList.remove("tick");
+          void el.offsetWidth;
+          el.classList.add("tick");
+        }
+      }
+
+      function updateCountdown() {
+        const now = Date.now();
+        const diff = launchDate - now;
+
+        if (diff <= 0) {
+          setCount(daysEl, 0);
+          setCount(hoursEl, 0);
+          setCount(minutesEl, 0);
+          setCount(secondsEl, 0);
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        setCount(daysEl, days);
+        setCount(hoursEl, hours);
+        setCount(minutesEl, minutes);
+        setCount(secondsEl, seconds);
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    </script>
+  </body>
+</html>

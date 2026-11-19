@@ -1,0 +1,123 @@
+<?php
+
+/**
+ * Default marketing homepage payload for the public API.
+ * Editable in admin; seeded on first install.
+ */
+return [
+    'brand' => 'BLiVR Movement',
+    'meta' => [
+        'title' => 'BLiVR Movement | Called to create. Commissioned to preach.',
+        'description' => 'A generation of creatives, builders, and young leaders carrying the fire of God.',
+    ],
+    'hero' => [
+        'headline' => 'BLiVR Movement',
+        'subhead' => 'Called to create. Commissioned to preach.',
+        'body' => 'We are a generation of creatives, builders, and young leaders carrying the fire of God—using our gifts and our voices to make Jesus known.',
+        'image' => '/HERO1Mobile3.jpg',
+        'imagePath' => null,
+        'imageUrl' => null,
+        'mobileImage' => '/HERO1Mobile3.jpg',
+        'mobileImagePath' => null,
+        'mobileImageUrl' => null,
+        'desktopImage' => '/HERO1copy.jpg',
+        'desktopImagePath' => null,
+        'desktopImageUrl' => null,
+        'primaryCta' => ['label' => 'Join Us', 'href' => '/join-us'],
+        'secondaryCta' => ['label' => 'Upcoming Meetings', 'href' => '/upcoming-meetings'],
+    ],
+    'who' => [
+        'title' => 'This Is Home For You If…',
+        'lines' => [
+            'You’re a creative, an entrepreneur, or a builder',
+            'You know you’re called to more than just talent—you want purpose',
+            'You don’t want to stay silent about your faith',
+            'You want to grow spiritually and boldly represent Jesus in your world',
+        ],
+        'intro' => 'Whether you’re a:',
+        'roles' => [
+            'Content creator, videographer, photographer',
+            'Musician, singer, or instrumentalist',
+            'Fashion designer, model, or artist',
+            'Writer, storyteller, or visionary',
+        ],
+        'closing' => 'If you create—there’s a place for you here.',
+        'image' => '/1.jpg',
+        'imagePath' => null,
+        'imageUrl' => null,
+    ],
+    'believe' => [
+        'title' => 'We Believe',
+        'paragraphs' => [
+            'Our gifts are not random—they are divine assignments.',
+            'We are called not only to create, but to preach.',
+            'God is raising a remnant—creatives and builders who will not stay hidden, but will carry His fire and speak with boldness.',
+            'We will preach in unconventional spaces—on campuses, in classrooms, in culture, and online.',
+            'We are not just creatives. We are disciples.',
+            'And through what we create and what we speak, we will take the Gospel to the nations.',
+        ],
+        'image' => '/GnaTA01.jpg',
+        'imagePath' => null,
+        'imageUrl' => null,
+    ],
+    'mission' => [
+        'visionTitle' => 'Our Vision',
+        'vision' => 'To raise a generation of Spirit-filled creatives, entrepreneurs, and leaders who carry the fire of God—creating with excellence, preaching with boldness, and making disciples across cultures, campuses, and nations.',
+        'missionTitle' => 'Our Mission',
+        'mission' => 'We equip and disciple young adults to encounter God, grow in spiritual depth, and boldly proclaim the Gospel through both their lives and their craft.',
+        'image' => '/VSMS01.jpg',
+        'imagePath' => null,
+        'imageUrl' => null,
+    ],
+    'mayInfo' => [
+        'enabled' => true,
+        'title' => '',
+        'videoUrl' => 'https://vimeo.com/1190371963?fl=pl&fe=sh',
+    ],
+    'growth' => [
+        'title' => 'How We Build You',
+        'subtitle' => 'We don’t just gather—we develop.',
+        'items' => [
+            ['icon' => '🔥', 'title' => 'Encounter', 'text' => 'Experience God’s presence through worship and prayer.'],
+            ['icon' => '📖', 'title' => 'Formation', 'text' => 'Grow in the Word, discipline, and real community.'],
+            ['icon' => '🎨', 'title' => 'Activation', 'text' => 'Use your gifts—create, build, and express.'],
+            ['icon' => '🗣', 'title' => 'Boldness', 'text' => 'Learn to speak, share, and preach with confidence.'],
+            ['icon' => '🌍', 'title' => 'Deployment', 'text' => 'Take the Gospel into campuses, culture, and the world.'],
+            ['icon' => '🔁', 'title' => 'Multiplication', 'text' => 'Make disciples and raise others.'],
+        ],
+    ],
+    'gatherings' => [
+        'title' => 'Join Us',
+        'lede' => 'We gather weekly as a community of young adults hungry for God and ready to grow.',
+        'expect' => [
+            'Authentic worship',
+            'Practical, Spirit-led teaching',
+            'A community that feels like family',
+            'Opportunities to use your gifts and step out in boldness',
+        ],
+        'location' => 'TBD — add your campus or address',
+        'time' => 'Sundays — add your time',
+        'cta' => ['label' => 'Plan Your Visit', 'href' => 'mailto:hello@blivrmvmt.com'],
+        'image' => '/BSEP01-cover.jpg',
+        'imagePath' => null,
+        'imageUrl' => null,
+        'youtubeUrl' => 'https://youtu.be/aAEFu5cBAf4',
+    ],
+    'finalCta' => [
+        'title' => 'Don’t Just Watch—Be Part of It',
+        'body' => 'You weren’t created to sit on the sidelines. You were created to build, to carry fire, and to make Jesus known. Join a generation that refuses to stay silent.',
+        'primary' => ['label' => 'Join the Community', 'href' => 'mailto:hello@blivrmvmt.com'],
+        'secondary' => ['label' => 'Follow Us on Instagram', 'href' => 'https://instagram.com/'],
+        'image' => null,
+        'imagePath' => null,
+        'imageUrl' => null,
+    ],
+    'footer' => [
+        'line1' => 'BLiVR Movement',
+        'line2' => 'A community for young creatives, builders, and disciples',
+        'tagline' => 'Called to create. Commissioned to preach.',
+        'instagram' => 'https://instagram.com/',
+        'email' => 'hello@blivrmvmt.com',
+        'location' => 'Your city — update in admin',
+    ],
+];

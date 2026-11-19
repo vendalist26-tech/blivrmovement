@@ -1,0 +1,56 @@
+<?php
+
+return [
+    'enabled' => true,
+    'buttonLabel' => 'RSVP',
+    'modalEyebrow' => 'Featured gathering',
+    'modalTitle' => 'Reserve your spot',
+    'modalSubtitle' => 'Let us know you are coming so we can plan seating, prayer teams, and follow-up.',
+    'submitLabel' => 'Submit RSVP',
+    'successTitle' => 'You are on the list!',
+    'successMessage' => 'Thanks for RSVPing. We will send any updates and reminders before the gathering.',
+    'fields' => [
+        [
+            'id' => 'full_name',
+            'type' => 'text',
+            'label' => 'Full name',
+            'placeholder' => 'Your name',
+            'required' => true,
+            'visible' => true,
+        ],
+        [
+            'id' => 'email',
+            'type' => 'email',
+            'label' => 'Email',
+            'placeholder' => 'you@example.com',
+            'required' => true,
+            'visible' => true,
+        ],
+        [
+            'id' => 'phone',
+            'type' => 'tel',
+            'label' => 'Phone',
+            'placeholder' => '5555555555',
+            'required' => false,
+            'visible' => true,
+        ],
+        [
+            'id' => 'guest_count',
+            'type' => 'number',
+            'label' => 'Additional guests',
+            'placeholder' => '0',
+            'required' => false,
+            'visible' => true,
+            'min' => 0,
+            'max' => 10,
+        ],
+        [
+            'id' => 'notes',
+            'type' => 'textarea',
+            'label' => 'Notes',
+            'placeholder' => 'Accessibility needs, first time visiting, etc.',
+            'required' => false,
+            'visible' => true,
+        ],
+    ],
+];
